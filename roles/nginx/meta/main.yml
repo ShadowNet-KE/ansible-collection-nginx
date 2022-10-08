@@ -44,6 +44,9 @@ galaxy_info:
     - development
     - install
 
+dependencies: []
+
 collections:
   - ansible.posix
   - community.general
+  - community.docker
