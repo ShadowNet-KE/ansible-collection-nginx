@@ -1,4 +1,6 @@
 ---
 roles:
+  - name: buluma.bootstrap
+  - name: buluma.epel
   - name: nginxinc.nginx
     version: 0.23.0

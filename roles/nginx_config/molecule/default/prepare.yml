@@ -2,6 +2,10 @@
 - name: Prepare
   hosts: all
   tasks:
+    - name: Bootstrap System
+      ansible.builtin.include_role:
+        name: buluma.bootstrap
+
     - name: Install NGINX
       ansible.builtin.include_role:
         name: nginxinc.nginx

@@ -4,7 +4,7 @@
   tasks:
     - name: Uninstall NGINX App Protect WAF and DoS
       ansible.builtin.include_role:
-        name: ansible-role-nginx-app-protect
+        name: nginx_app_protect # ansible-role-nginx_app_protect
       vars:
         nginx_app_protect_waf_enable: true
         nginx_app_protect_waf_setup: uninstall

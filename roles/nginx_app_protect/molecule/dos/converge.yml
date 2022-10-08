@@ -21,7 +21,7 @@
   tasks:
     - name: Install NGINX App Protect DoS
       ansible.builtin.include_role:
-        name: ansible-role-nginx-app-protect
+        name: nginx_app_protect # ansible-role-nginx_app_protect
       vars:
         nginx_app_protect_waf_enable: false
         nginx_app_protect_dos_enable: true

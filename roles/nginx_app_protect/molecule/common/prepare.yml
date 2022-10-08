@@ -1,7 +1,13 @@
 ---
 - name: Prepare
-  hosts: localhost
-  gather_facts: false
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.epel
+
   tasks:
     - name: Create ephemeral license certificate file from b64 decoded env var
       ansible.builtin.copy:

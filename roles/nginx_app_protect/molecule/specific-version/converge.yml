@@ -23,7 +23,7 @@
 
     - name: Install NGINX App Protect WAF
       ansible.builtin.include_role:
-        name: ansible-role-nginx-app-protect
+        name: nginx_app_protect # ansible-role-nginx_app_protect
       vars:
         nginx_app_protect_license:
           certificate: license/nginx-repo.crt
