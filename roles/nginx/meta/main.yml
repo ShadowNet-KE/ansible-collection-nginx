@@ -13,10 +13,10 @@ galaxy_info:
   platforms:
     - name: Alpine
       versions:
-        - any
-    - name: Amazon Linux 2
+        - all
+    - name: Amazon
       versions:
-        - any
+        - all
     - name: Debian
       versions:
         - buster
@@ -25,18 +25,14 @@ galaxy_info:
       versions:
         - "7"
         - "8"
-    - name: FreeBSD
-      versions:
-        - "12.1"
     - name: Ubuntu
       versions:
         - bionic
         - focal
-        - hirsute
-    - name: SLES
+        - jammy
+    - name: opensuse
       versions:
-        - "12"
-        - "15"
+        - all
 
   galaxy_tags:
     - nginx

@@ -1,18 +1,19 @@
 ---
 version: 2
 updates:
-  - package-ecosystem: github-actions
-    directory: /
+  - package-ecosystem: docker
+    directory: '/'
     schedule:
-      interval: weekly
-      day: monday
-      time: "00:00"
+      interval: daily
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
     labels:
-      - "dependencies"
-      - "skip-changelog"
-  - package-ecosystem: pip
-    directory: /.github/workflows/requirements
+      - 'type: dependencies'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: weekly
-      day: monday
-      time: "00:00"
+      interval: 'daily'

@@ -1,33 +1,30 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+about: Create a report to help me improve
+
 ---
-### Describe the bug
+
+## Describe the bug
 
 A clear and concise description of what the bug is.
 
-### To reproduce
+## Playbook
 
-Steps to reproduce the behavior:
+Please paste the playbook you are using. (Consider `requirements.yml` and
+optionally the command you've invoked.)
 
-1. Deploy NGINX role using playbook.yml
-2. View output/logs/configuration on '...'
-3. See error
 
-### Expected behavior
+```yaml
+---
+YOUR PLAYBOOK HERE
+```
 
-A clear and concise description of what you expected to happen.
+## Output
 
-### Your environment
+Show at least the error, possible related output, maybe just all the output.
 
-- Version of the NGINX role or specific commit
-- Version of Ansible
-- Version of Jinja2 (if you are using any templating capability)
-- Target deployment platform
+## Environment
 
-### Additional context
-
-Add any other context about the problem here.
+- Control node OS: [e.g. Debian 9] (`cat /etc/os-release`)
+- Control node Ansible version: [e.g. 2.9.1] (`ansible --version`)
+- Managed node OS: [e.g. CentOS 7] (`cat /etc/os-release`)

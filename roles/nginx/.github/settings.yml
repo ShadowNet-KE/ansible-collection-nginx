@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Ansible role for NGINX
+  homepage: https://buluma.github.io/
+  topics: nginx, oss, opensource, plus, web, server, development, install, ansible, molecule, tox, playbook, hacktoberfest

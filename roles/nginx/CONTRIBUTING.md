@@ -1,74 +1,74 @@
-# Contributing Guidelines
+# [Please contribute](#please-contribute)
 
-The following is a set of guidelines for contributing to the NGINX Ansible role. We really appreciate that you are considering contributing!
+You can really make a difference by:
 
-#### Table Of Contents
+- [Making an issue](https://help.github.com/articles/creating-an-issue/). A well described issue helps a lot. (Have a look at the [known issues](https://github.com/search?q=user%3Abuluma+is%3Aissue+state%3Aopen).)
+- [Making a pull request](https://services.github.com/on-demand/github-cli/open-pull-request-github) when you see the error in code.
 
-[Ask a Question](#ask-a-question)
+I'll try to help and take every contribution seriously.
 
-[Getting Started](#getting-started)
+It's a great opportunity for me to learn how you use the role and also an opportunity to get into the habit of contributing to open source software.
 
-[Contributing](#contributing)
+## [Step by step](#step-by-step)
 
-[Code Guidelines](#code-guidelines)
+Here is how you can help, a lot of steps are related to GitHub, not specifically my roles.
 
-* [Git Guidelines](#git-guidelines)
-* [Ansible Guidelines](#ansible-guidelines)
+### [1. Make an issue.](#1-make-an-issue)
 
-[Code of Conduct](https://github.com/nginxinc/ansible-role-nginx/blob/main/CODE_OF_CONDUCT.md)
+When you spot an issue, [create an issue](https://github.com/buluma/ansible-role-nginx/issues).
 
-## Ask a Question
+Making the issue help me and others to find similar problems in the future.
 
-Don't know how something works? Curious if the role can achieve your desired functionality? Please open an Issue on GitHub with the label `question`.
+### [2. Fork the project.](#2-fork-the-project)
 
-## Getting Started
+On the top right side of [the repository on GitHub](https://github.com/buluma/ansible-role-nginx), click `fork`. This copies everything to your GitHub namespace.
 
-Follow our [Installation Guide](https://github.com/nginxinc/ansible-role-nginx/blob/main/README.md#Installation) to install Ansible and Molecule and get ready to use the NGINX Ansible role.
+### [3. Make the changes](#3-make-the-changes)
 
-### Project Structure
+In you own GitHub namespace, make the required changes.
 
-* The NGINX Ansible role is written in `yaml` and supports NGINX Open Source, NGINX Plus, and NGINX Amplify.
-* The project follows the standard [Ansible role directory structure](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html):
-  * The main code is found in [`tasks/`](https://github.com/nginxinc/ansible-role-nginx/blob/main/tasks/).
-  * Variables can be found in [`defaults/main/`](https://github.com/nginxinc/ansible-role-nginx/blob/main/defaults/main/).
-  * "Constant" variables can be found in [`vars/main.yml`](https://github.com/nginxinc/ansible-role-nginx/blob/main/vars/main.yml).
-  * Configuration templates for NGINX can be found in [`templates/`](https://github.com/nginxinc/ansible-role-nginx/blob/main/templates/).
-  * [Molecule](https://molecule.readthedocs.io/) tests can be found in [`molecule/`](https://github.com/nginxinc/ansible-role-nginx/blob/main/molecule/).
-  * CI/CD is done via GitHub actions using the workflow files found in [`.github/workflows/`](https://github.com/nginxinc/ansible-role-nginx/blob/main/.github/workflows/).
+I typically do that by cloning the repository (in your namespace) locally:
 
-## Contributing
+```
+git clone git@github.com:YOURNAMESPACE/ansible-role-nginx.git
+```
 
-### Report a Bug
+Now you can start to edit on your laptop.
 
-To report a bug, open an issue on GitHub with the label `bug` using the available bug report issue template. Please ensure the issue has not already been reported.
+### [4. Optionally: test your changes](#4-optionally-test-your-changes)
 
-### Suggest an Enhancement
+Install [molecule](https://molecule.readthedocs.io/en/stable/) and [Tox](https://tox.readthedocs.io/):
 
-To suggest an enhancement, please create an issue on GitHub with the label `enhancement` using the available feature issue template.
+```
+pip install molecule tox ansible-lint docker
+```
 
-### Open a Pull Request
+And run `molecule test`. If you want to test a specific distribution, set `image` and optionally `tag`:
 
-* Fork the repo, create a branch, implement your changes, add any relevant Molecule tests, submit a PR when your changes are **tested** (using Molecule) and ready for review.
-* Fill in [our pull request template](https://github.com/nginxinc/ansible-role-nginx/blob/main/.github/pull_request_template.md).
+```
+image=centos tag=7 molecule test
+```
 
-Note: if you'd like to implement a new feature, please consider creating a feature request issue first to start a discussion about the feature.
+Once it start to work, you can test multiple version of Ansible:
 
-## Code Guidelines
+```
+image=centos tag=7 tox
+```
 
-### Ansible Guidelines
+### [5. Optionally: Regenerate all dynamic content](#5-optionally-regenerate-all-dynamic-content)
 
-* Run `molecule lint` over your code to automatically resolve a lot of `yaml` and Ansible style issues.
-* Run `molecule test` on your code before you submit a PR to catch any potential issues. If you are testing a specific molecule scenario, run `molecule test -s <scenario>`. If you are testing the NGINX Plus scenario (`plus`), you will need to procure an NGINX Plus license (check out the [NGINX Plus developer license FAQ](https://www.nginx.com/developer-license-faqs/) to find out how to request one).
-* Follow these guides on some good practices for Ansible:
-  * <https://www.ansible.com/blog/ansible-best-practices-essentials>
-  * <https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html>
+You can use [Ansible Generator](https://github.com/buluma/ansible-generator) to regenerate all dynamic content.
 
-### Git Guidelines
+If you don't do it, I'll do it later for you.
 
-* Keep a clean, concise and meaningful git commit history on your branch (within reason), rebasing locally and squashing before submitting a PR.
-* Follow the guidelines of writing a good commit message as described here <https://chris.beams.io/posts/git-commit/> and summarised in the next few points:
-  * In the subject line, use the present tense ("Add feature" not "Added feature").
-  * In the subject line, use the imperative mood ("Move cursor to..." not "Moves cursor to...").
-  * Limit the subject line to 72 characters or less.
-  * Reference issues and pull requests liberally after the subject line.
-  * Add more detailed description in the body of the git message (`git commit -a` to give you more space and time in your text editor to write a good message instead of `git commit -am`).
+### [6. Make a pull request](#6-make-a-pull-request)
+
+[GitHub](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) on pull requests.
+
+In the comment-box, you can [refer to the issue number](https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls) by using #123, where 123 is the issue number.
+
+### [7. Wait](#7-wait)
+
+Now I'll get a message that you've added some code. Thank you, really.
+
+CI starts to test your changes. You can follow the progress on GitHub.

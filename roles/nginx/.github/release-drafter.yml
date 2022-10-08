@@ -1,100 +1,32 @@
 ---
-name-template: "$RESOLVED_VERSION"
-tag-template: "$RESOLVED_VERSION"
+name-template: 'v$RESOLVED_VERSION 🌈'
+tag-template: 'v$RESOLVED_VERSION'
 categories:
-  - title: "💣 Breaking Changes"
+  - title: '🚀 Features'
     labels:
-      - "breaking change"
-  - title: "🔔 Deprecation Warnings"
+      - 'feature'
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
     labels:
-      - "deprecation"
-  - title: "🚀 Features"
-    labels:
-      - "feature"
-  - title: "🎉 Enhancements"
-    labels:
-      - "enhancement"
-  - title: "🐛 Bug Fixes"
-    labels:
-      - "bug"
-  - title: "📝 Documentation"
-    labels:
-      - "documentation"
-  - title: "⬆️ Dependencies"
-    labels:
-      - "dependencies"
-exclude-labels:
-  - "skip-changelog"
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+  - title: '🧰 Maintenance'
+    label: 'chore'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&'   # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:
+  major:
+    labels:
+      - 'major'
   minor:
     labels:
-      - "breaking change"
-      - "deprecation"
+      - 'minor'
   patch:
     labels:
-      - "bug"
-      - "dependencies"
-      - "documentation"
-      - "feature"
-      - "enhancement"
+      - 'patch'
   default: patch
-autolabeler:
-  - label: "breaking change"
-    body:
-      - "/breaking/i"
-  - label: "deprecation"
-    branch:
-      - "/deprecate\/.+/"
-    title:
-      - "/deprecate/i"
-  - label: "feature"
-    branch:
-      - "/feat\/.+/"
-      - "/feature\/.+/"
-      - "/implement\/.+/"
-    title:
-      - "/feat/i"
-      - "/feature/i"
-      - "/implement/i"
-  - label: "enhancement"
-    branch:
-      - "/add\/.+/"
-      - "/enhancement\/.+/"
-    title:
-      - "/add/i"
-      - "/enhancement/i"
-  - label: "bug"
-    branch:
-      - "/fix\/.+/"
-    title:
-      - "/fix/i"
-  - label: "documentation"
-    branch:
-      - "/docs\/.+/"
-    files:
-      - "**/!(changelog).md"
-    title:
-      - "/docs/i"
-      - "/documentation/i"
-  - label: "dependencies"
-    files:
-      - ".github/workflows/requirements/*"
 template: |
-  👾 *Help make the NGINX Ansible role better by participating in our [survey](https://forms.office.com/Pages/ResponsePage.aspx?id=L_093Ttq0UCb4L-DJ9gcUKLQ7uTJaE1PitM_37KR881UM0NCWkY5UlE5MUYyWU1aTUcxV0NRUllJSC4u)!* 👾
-
-  ## What's new in NGINX's Ansible role $RESOLVED_VERSION!
+  ## Rifle, Rifle, Rifle!
 
   $CHANGES
-
-  ## Install & Upgrade
-
-  * To install the Ansible NGINX role on a fresh environment, run `ansible-galaxy install nginxinc.nginx`.
-  * To upgrade the Ansible NGINX role to the latest release, run `ansible-galaxy install -f nginxinc.nginx`.
-  * To install or upgrade to this specific Ansible NGINX role release ($RESOLVED_VERSION), run `ansible-galaxy install -f nginxinc.nginx,v$RESOLVED_VERSION`.
-
-  ## Resources
-
-  * Functional configuration examples (check `converge.yml` under each `molecule` scenario) -- [github.com/nginxinc/ansible-role-nginx/tree/$RESOLVED_VERSION/molecule](https://github.com/nginxinc/ansible-role-nginx/tree/$RESOLVED_VERSION/molecule).
-  * Ansible Galaxy repository -- [galaxy.ansible.com/nginxinc/nginx](https://galaxy.ansible.com/nginxinc/nginx).
-  * NGINX Ansible role & collection introductory blog -- [nginx.com/blog/announcing-nginx-core-collection-ansible](https://www.nginx.com/blog/announcing-nginx-core-collection-ansible).
-  * NGINX: Better with Ansible demo -- [github.com/alessfg/nginx-ansible-demo](https://github.com/alessfg/nginx-ansible-demo).
