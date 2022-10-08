@@ -1,14 +1,14 @@
 ---
 galaxy_info:
-  author: Daniel Edgar
+  author: buluma
   description: Official Ansible role for NGINX App Protect WAF and DoS
   role_name: nginx_app_protect
-  namespace: nginxinc  # Ansible Lint requirement
-  company: F5 Networks, Inc.
+  namespace: buluma  # Ansible Lint requirement
+  company: ShadowNet
 
   license: Apache License, Version 2.0
 
-  min_ansible_version: 2.11
+  min_ansible_version: "2.11"
 
   platforms:
     - name: Amazon Linux 2
@@ -16,8 +16,8 @@ galaxy_info:
         - any
     - name: EL
       versions:
-        - 7
-        - 8
+        - "7"
+        - "8"
     - name: Debian
       versions:
         - buster
