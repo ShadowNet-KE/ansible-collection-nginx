@@ -78,31 +78,31 @@ You can also include the collection in a `requirements.yml` file and install it 
 ```yaml
 ---
 collections:
-  - name: nginxinc.nginx_core
+  - name: buluma.nginx_core
     version: 0.6.0
 ```
 
 ### Git
 
-Use `git clone https://github.com/nginxinc/ansible-collection-nginx.git` to pull the latest edge commit of the collection from GitHub.
+Use `git clone https://github.com/ShadowNet-KE/ansible-collection-nginx.git` to pull the latest edge commit of the collection from GitHub.
 
 ## Usage
 
-Sample playbooks for each use case covered by this collection can be found in the [`playbooks/`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/) folder in the following files:
+Sample playbooks for each use case covered by this collection can be found in the [`playbooks/`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/) folder in the following files:
 
 | Name | Description |
 | ---- | ----------- |
-| **[`deploy-nginx.yml`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/deploy-nginx.yml)** | Install NGINX |
-| **[`deploy-nginx-plus.yml`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/deploy-nginx-plus.yml)** | Install NGINX Plus |
-| **[`deploy-nginx-app-protect.yml`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/deploy-nginx-app-protect.yml)** | Install NGINX App Protect WAF/DoS |
-| **[`deploy-nginx-plus-app-protect.yml`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/deploy-nginx-plus-app-protect.yml)** | Install NGINX Plus and NGINX App Protect WAF |
-| **[`deploy-nginx-web-server.yml`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/deploy-nginx-web-server.yml)** | Install NGINX and configure a simple web server |
-| **[`deploy-nginx-web-server-proxy.yml`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/deploy-nginx-web-server-proxy.yml)** | Install NGINX and configure a simple reverse proxy in front of two web servers |
-| **[`deploy-nginx-plus-app-protect-web-server-proxy.yml`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/playbooks/deploy-nginx-plus-app-protect-web-server-proxy.yml)** | Install NGINX Plus and NGINX App Protect and configure a simple reverse proxy in front of two web servers protected by NGINX App Protect WAF/DoS |
+| **[`deploy-nginx.yml`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/deploy-nginx.yml)** | Install NGINX |
+| **[`deploy-nginx-plus.yml`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/deploy-nginx-plus.yml)** | Install NGINX Plus |
+| **[`deploy-nginx-app-protect.yml`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/deploy-nginx-app-protect.yml)** | Install NGINX App Protect WAF/DoS |
+| **[`deploy-nginx-plus-app-protect.yml`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/deploy-nginx-plus-app-protect.yml)** | Install NGINX Plus and NGINX App Protect WAF |
+| **[`deploy-nginx-web-server.yml`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/deploy-nginx-web-server.yml)** | Install NGINX and configure a simple web server |
+| **[`deploy-nginx-web-server-proxy.yml`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/deploy-nginx-web-server-proxy.yml)** | Install NGINX and configure a simple reverse proxy in front of two web servers |
+| **[`deploy-nginx-plus-app-protect-web-server-proxy.yml`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/playbooks/deploy-nginx-plus-app-protect-web-server-proxy.yml)** | Install NGINX Plus and NGINX App Protect and configure a simple reverse proxy in front of two web servers protected by NGINX App Protect WAF/DoS |
 
 ## Development
 
-Currently, all the NGINX roles included in this collection (found in the [`roles/`](https://github.com/nginxinc/ansible-collection-nginx/blob/main/roles/) folder) are Git submodules, and work on the roles themselves should take place in the corresponding upstream role repository.
+Currently, all the NGINX roles included in this collection (found in the [`roles/`](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/roles/) folder) are Git submodules, and work on the roles themselves should take place in the corresponding upstream role repository.
 
 To update the roles included in this collection to their latest version, run `git submodule update --recursive --remote`.
 
@@ -114,7 +114,7 @@ You can find the Ansible NGINX Unit role to install NGINX Unit [here](https://gi
 
 ## License
 
-[Apache License, Version 2.0](https://github.com/nginxinc/ansible-collection-nginx/blob/main/LICENSE)
+[Apache License, Version 2.0](https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/master/LICENSE)
 
 ## Author Information
 
