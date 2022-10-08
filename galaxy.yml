@@ -1,0 +1,36 @@
+---
+namespace: buluma
+name: nginx_core
+description: Install and configure NGINX and NGINX App Protect using Ansible
+version: 0.1.0
+readme: README.md
+license_file: LICENSE
+authors:
+  - Shadow Walker <shadowwalker.ke@gmail.com>
+
+tags:
+  - nginx
+  - nginx_plus
+  - nginx_config
+  - nginx_app_protect
+  - oss
+  - opensource
+  - plus
+  - web
+  - server
+  - load_balancer
+  - reverse_proxy
+  - api_gateway
+  - waf
+  - dos
+  - security
+  - installation
+  - configuration
+  - infrastructure
+  - cloud
+  - monitoring
+
+repository: https://github.com/ShadowNet-KE/ansible-collection-nginx
+homepage: https://github.com/ShadowNet-KE/ansible-collection-nginx
+documentation: https://github.com/ShadowNet-KE/ansible-collection-nginx/blob/main/README.md
+issues: https://github.com/ShadowNet-KE/ansible-collection-nginx/issues

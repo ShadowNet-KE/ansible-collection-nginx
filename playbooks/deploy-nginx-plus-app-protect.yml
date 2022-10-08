@@ -1,0 +1,23 @@
+---
+- hosts: all
+  collections:
+    - nginxinc.nginx_core
+  tasks:
+    - name: Install NGINX Plus
+      ansible.builtin.include_role:
+        name: nginx
+      vars:
+        nginx_type: plus
+        nginx_license:
+          certificate: <path/to/certificate>
+          key: <path/to/key>
+        nginx_remove_license: false
+
+    - name: Install NGINX App Protect WAF
+      ansible.builtin.include_role:
+        name: nginx_app_protect
+      vars:
+        nginx_app_protect_setup_license: false
+        nginx_app_protect_remove_license: true
+        nginx_app_protect_install_signatures: true
+        nginx_app_protect_install_threat_campaigns: true

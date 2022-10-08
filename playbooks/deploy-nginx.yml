@@ -1,0 +1,8 @@
+---
+- hosts: all
+  collections:
+    - nginxinc.nginx_core
+  tasks:
+    - name: Install NGINX
+      ansible.builtin.include_role:
+        name: nginx

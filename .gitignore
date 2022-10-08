@@ -1,0 +1,31 @@
+# Any private crt and keys #
+############################
+*.crt
+*.key
+*~
+\#*
+!molecule.crt
+!molecule.key
+
+# OS Specific #
+###############
+Thumbs.db
+.DS_Store
+.vscode
+
+# Ansible specific #
+####################
+.cache
+*.retry
+
+# Ansible collection specific #
+###############################
+nginxinc-nginx_core-*.tar.gz
+
+# Python specific #
+###################
+__pycache__
+
+# Logs #
+########
+*.log

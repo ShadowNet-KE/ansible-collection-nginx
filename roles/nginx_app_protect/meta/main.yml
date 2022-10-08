@@ -1,0 +1,41 @@
+---
+galaxy_info:
+  author: Daniel Edgar
+  description: Official Ansible role for NGINX App Protect WAF and DoS
+  role_name: nginx_app_protect
+  namespace: nginxinc  # Ansible Lint requirement
+  company: F5 Networks, Inc.
+
+  license: Apache License, Version 2.0
+
+  min_ansible_version: 2.11
+
+  platforms:
+    - name: Amazon Linux 2
+      versions:
+        - any
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Debian
+      versions:
+        - buster
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+
+  galaxy_tags:
+    - waf
+    - security
+    - nginx
+    - plus
+    - web
+    - server
+    - development
+    - dos
+
+collections:
+  - ansible.posix
+  - community.general
