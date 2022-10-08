@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: buluma
-  description: Official Ansible role for NGINX
+  description: Ansible role for NGINX
   role_name: nginx
   namespace: buluma  # Ansible Lint requirement
   company: ShadowNet
