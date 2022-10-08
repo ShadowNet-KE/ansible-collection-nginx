@@ -17,7 +17,7 @@
   tasks:
     - name: Install NGINX
       ansible.builtin.include_role:
-        name: buluma.nginx_core.nginx
+        name: nginx # buluma.nginx_core.nginx
       vars:
         nginx_version: "{{ version }}"
         nginx_service_modify: true

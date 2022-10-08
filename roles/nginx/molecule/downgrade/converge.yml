@@ -1,6 +1,7 @@
 ---
 - name: Converge
   hosts: all
+  strategy: debug
   pre_tasks:
     - name: Set repo if Alpine
       ansible.builtin.set_fact:
@@ -17,7 +18,7 @@
   tasks:
     - name: Install NGINX
       ansible.builtin.include_role:
-        name: ansible-role-nginx
+        name: nginx # buluma.nginx_core.nginx
       vars:
         nginx_version: "{{ version }}"
         nginx_branch: stable

@@ -4,7 +4,7 @@
   tasks:
     - name: Install NGINX modules
       ansible.builtin.include_role:
-        name: ansible-role-nginx
+        name: nginx # buluma.nginx_core.nginx
       vars:
         nginx_modules:
           - brotli

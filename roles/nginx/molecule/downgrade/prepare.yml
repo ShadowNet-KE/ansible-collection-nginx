@@ -1,6 +1,7 @@
 ---
 - name: Prepare
   hosts: all
+  strategy: debug
   pre_tasks:
     - name: Set repo if Alpine
       ansible.builtin.set_fact:
@@ -17,6 +18,6 @@
   tasks:
     - name: Install NGINX
       ansible.builtin.include_role:
-        name: ansible-role-nginx
+        name: nginx
       vars:
         nginx_version: "{{ version }}"
